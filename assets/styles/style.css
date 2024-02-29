@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MÉTODO DE CORES HSL */
+/* SETAMOS UMA VARIÁVEL PARA MUDAR A COR PRINCIPAL DAS OUTRAS VARIAVEIS, CHAMAMOS ESSA VARIAVEL DE HUE */
+:root {
+    --hue: 194;
+    --bg-color: hsl(var(--hue), 5%, 7%);
+    --text-color: hsl(var(--hue), 40%, 98%);
+    --primary-color: hsl(var(--hue), 100%, 63%);
+    --controls-bg-color: hsl(var(--hue), 0%, 14%);
+
+    /* O CLAMP É UMA PROPRIEDADE CSS PARA DEFINIR UM VALOR PADRÃO, UM VALOR MÍNIMO E UM VALOR MÁXIMO. É UMA FORMA DE DEIXAR O TEXTO RESPONSIVO NATURALMENTE */
+    font-size: clamp(40%, 1% + 2vw, 62,5%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    display: grid;
+    height: 100vh;
+
+    /* ALINHAR TUDO AO CENTRO DA TELA COM O DISPLAY GRID/FLEXBOX */
+    place-content: center;
+}
+
+#app {
+    display: grid;
+
+    /* ALINHA VERTICALMENTE */
+    justify-items: center;
+}
+
+
+/* CRIAMOS UMA CLASSE UTILITÁRIA, ELA TEM APENAS UM PROPÓSITO, UMA ESTILIZAÇÃO. APLICAMOS ELA DIRETAMENTE NO ELEMENTO */
+.flex {
+    display: flex;
+}
+
+#timer {
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#controls {
+    margin-top: 1.6rem;
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 999rem;
+}
+
+button{
+    background-color: transparent;
+    border: 0;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 6.4rem;
+}
+
+.secondaryColor {
+    color: var(--text-color);
+}

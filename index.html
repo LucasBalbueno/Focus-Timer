@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusTimer - Pomodoro</title>
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <link rel="icon" type="image/x-svg" href="./assets/icons/FaviconFT.svg">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <button id="toggleMode">
+            <span>Ativar/Desativar Light Mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button> -->
+
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+            <button class="ph ph-play-circle"></button>
+            <button class="ph ph-pause-circle"></button>
+            <button class="ph ph-timer secondaryColor"></button>
+            <button class="ph ph-stop-circle secondaryColor"></button>
+            <button class="ph ph-speaker-none secondaryColor"></button>
+            <button class="ph ph-speaker-high"></button>
+        </section>
+    </div>
+</body>
+</html>
